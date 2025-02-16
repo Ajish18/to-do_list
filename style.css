@@ -1,0 +1,43 @@
+html,body{
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(yellow 20%,red);
+}
+input{
+    height: 20px;
+    width: 250px;
+}
+button{
+    height: 20px;
+    width: 50px;
+}
+li {
+    display: flex;
+    justify-content: space-between; /* Ensures the button is always on the right */
+    align-items: center;
+    background: white;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button{
+    cursor: pointer;
+}
+
+/* Delete button styling */
+.delete {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    min-width: 60px; /* Ensures all buttons have the same width */
+    text-align: center;
+}
+.delete:hover{
+    color: black;
+    background-color: white;
+    
+}
+

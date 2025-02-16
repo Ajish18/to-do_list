@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="list">
+    <center>
+        <h1>Enter Your To-do List</h1>
+        <p>"Small steps every day lead to big achievements."</p>
+    <input id="input">
+    <button onclick="add()" class="add">Add</button>
+    <ul id="ul">
+        <li>Hello
+        <button onclick="deleteItem(event)" class="delete">Delete</button>
+        </li>
+    </ul>
+    </center>
+    </div>
+
+    <script>
+        var input=document.getElementById("input")
+        var ul=document.getElementById("ul")
+        function add(){
+            var li=document.createElement("li");
+            li.innerHTML=input.value+"<button onclick='deleteItem(event)'>Delete</button>"
+            ul.append(li)
+
+        }
+        
+        function deleteItem(event){
+            var li = event.target.parentElement;  // Get the <li> of the clicked delete button
+                ul.removeChild(li);  
+
+        }
+    </script>
+    
+</body>
+</html>
